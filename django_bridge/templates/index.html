@@ -66,22 +66,35 @@
 <footer>
     <nav aria-label="Page navigation" style="text-align:center;">
         <ul class="pagination">
-            <li>
-                <a href="" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
+        {#上一页按钮开始#}
+        {# 如果当前页有上一页#}
+        {% if all_news.has_previous %}
+            {#  当前页的上一页按钮正常使用#}
+            <li class="previous"><a href="?page={{ all_news.previous_page_number }}">上一页</a></li>
+        {% else %}
+            {# 当前页的不存在上一页时,上一页的按钮不可用#}
+            <li class="previous disabled"><a href="#">上一页</a></li>
+        {% endif %}
+        {#上一页按钮结束#}
+        {# 页码开始#}
+        {% for num in paginator.page_range%}
+            {% if num == currentPage %}
+                <li class="item active"><a href="?page={{ num }}">{{ num }}</a></li>
+
+            {% elif num > page_back and num < page_go   %}
+                <li class="item"><a href="?page={{ num }}">{{ num }}</a></li>
+            {% else %}
+                <li class="hidden"><a>...</a></li>
+            {% endif %}
+        {% endfor %}
+        {#页码结束#}
+        {# 下一页按钮开始#}
+        {% if all_news.has_next %}
+            <li class="next"><a href="?page={{ all_news.next_page_number }}">下一页</a></li>
+        {% else %}
+            <li class="next disabled"><a href="#">下一页</a></li>
+        {% endif %}
+        {# 下一页按钮结束#}
     </nav>
     <p style="text-align:center">
         copyright © 2007-2018 cnbridge.cn All Rights Reserved<br>
