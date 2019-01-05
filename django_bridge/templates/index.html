@@ -1,4 +1,5 @@
 {% load static %}
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,7 +33,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand">
-                <img alt="Brand" width="100" style="margin-top:-8px;" src="./logo_index.jpg">
+                <img alt="Brand" width="100" style="margin-top:-8px;" src="{% static 'images/logo_index.jpg' %}">
             </a>
         </div>
 
@@ -42,7 +43,8 @@
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search" name="keyword">
             </div>
-            <button type="submit" style="padding:0"><img alt="搜索" width="36" src="./index_submit.jpg"></button>
+            <button type="submit" style="padding:0"><img alt="搜索" width="36"
+                                                         src="{% static 'images/index_submit.jpg' %}"></button>
         </form>
 
     </div><!-- /.navbar-collapse -->
@@ -54,7 +56,7 @@
         <div class="row">
             <div class="col-lg-10 col-xs-12">
                 <h3><a href={{ new.url }}>{{ new.title }}</a></h3>
-                <p>主编推荐 　{{ new.time }}　来源：{{ new.source }}|0</p>
+                <p>主编推荐 　{{ new.time }}　来源：{{ new.source }}</p>
                 <p>{{ new.summary }}</p>
             </div>
         </div>
@@ -65,7 +67,7 @@
     <nav aria-label="Page navigation" style="text-align:center;">
         <ul class="pagination">
             <li>
-                <a href="#" aria-label="Previous">
+                <a href="" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>

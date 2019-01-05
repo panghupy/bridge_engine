@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f7524d31-f8e1-4f33-93fb-67e7d3424b42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/django_bridge/static/images/index_submit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_bridge/static/images/logo_index.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_bridge/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/django_bridge/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/django_bridge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/news/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_bridge/django_bridge/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_bridge/django_bridge/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_bridge/django_bridge/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spider_bridge/bridge/spiders/newsCrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/spider_bridge/bridge/spiders/newsCrawl.py" afterDir="false" />
-    </list>
+    <list default="true" id="f7524d31-f8e1-4f33-93fb-67e7d3424b42" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +12,7 @@
     <session id="-1073795331">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="2" />
@@ -203,7 +186,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="7" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25261998" />
