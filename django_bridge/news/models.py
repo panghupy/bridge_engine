@@ -10,6 +10,9 @@ class News(models.Model):
     time = models.CharField(max_length=255)
     keyword = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.title
+
     class Meta():
         verbose_name = '新闻'
         verbose_name_plural = verbose_name

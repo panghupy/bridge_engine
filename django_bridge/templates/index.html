@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--font Awesome-->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <style>
+        .bg {
+            background: #0d407a;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse bg">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand">
+                <img alt="Brand" width="100" style="margin-top:-8px;" src="./logo_index.jpg">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <form class="navbar-form navbar-left" role="search" action="{% url 'news:search' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="keyword">
+            </div>
+            <button type="submit" style="padding:0"><img alt="搜索" width="36" src="./index_submit.jpg"></button>
+        </form>
+
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    {% for new in all_news %}
+        <div class="row">
+            <div class="col-lg-10 col-xs-12">
+                <h3><a href={{ new.url }}>{{ new.title }}</a></h3>
+                <p>主编推荐 　{{ new.time }}　来源：{{ new.source }}|0</p>
+                <p>{{ new.summary }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<footer>
+    <nav aria-label="Page navigation" style="text-align:center;">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <p style="text-align:center">
+        copyright © 2007-2018 cnbridge.cn All Rights Reserved<br>
+        ICP经营许可证100299号 京ICP备10020099号 京公网安备 11010802020311号
+    </p>
+</footer>
+</body>

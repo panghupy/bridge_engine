@@ -3,8 +3,7 @@ import scrapy
 import re
 from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
-from items import BridgeItem
-from bridge.items import BridgeItem
+from ..items import BridgeItem
 
 
 class NewscrawlSpider(CrawlSpider):
