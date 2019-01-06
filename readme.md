@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 ### 2. 配置
 
-#### 2.1 mysql数据库配置
+#### 2.1 mysql数据库配置
 
 ``` bash
 # 进入mysql环境，并创建叫做bridge的数据库
@@ -29,7 +29,7 @@ mysql -u root -p
 # 按CTRL + D退出
 ```
 
-#### 2.2 项目配置
+#### 2.2 项目配置
 
 ``` bash
 cd $project_root/django_bridge/django_bridge
@@ -64,4 +64,5 @@ python3 manage.py runserver
 ## 使用须知
 
 - 本项目的依赖基于python3，请确保python3环境安装正常
+- 目前在mac环境和linux环境下正常，windows环境没有测试
 - 目前关键词是在`$project_root/spider_bridge/bridge/spiders/newsCreawl.py` 中，之后会改进其可扩展性
