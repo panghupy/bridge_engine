@@ -59,6 +59,7 @@ python3 main.py
 # 运行django网站
 cd $project_root/django_bridge
 python3 manage.py runserver
+# 浏览器访问 http://127.0.0.1:8000/news/search/ 即可正常使用
 ```
 
 ## 使用须知
