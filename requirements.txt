@@ -29,6 +29,6 @@ urllib3==1.24.1
 w3lib==1.19.0
 zope.interface==4.6.0
 Django==1.11
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 PyMySQL==0.9.3
 pytz==2018.7
